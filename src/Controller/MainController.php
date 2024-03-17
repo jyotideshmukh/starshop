@@ -9,8 +9,10 @@ use Symfony\Component\Routing\Attribute\Route;
 class MainController extends AbstractController
 {
     #[Route('/')]
-    public function home():Response
+    public function homepage():Response
     {
-        return new Response('<strong>Starshop</strong>: monoply for all starshop');
+        //return new Response('<strong>Starshop</strong>: monoply for all starshop');
+        return
+            $this->render('main/homepage.html.twig');
     }
 }

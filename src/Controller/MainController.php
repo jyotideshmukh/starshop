@@ -11,8 +11,18 @@ class MainController extends AbstractController
     #[Route('/')]
     public function homepage():Response
     {
-        //return new Response('<strong>Starshop</strong>: monoply for all starshop');
+        $countOfStarship = 457;
+        $myShip = [
+            'name' =>'Sea heaven',
+            'status'=> 'Working',
+            'captain' =>'Jack Sparrow',
+            'code'=> '5697'
+        ];
         return
-            $this->render('main/homepage.html.twig');
+            $this->render('main/homepage.html.twig',
+            [
+                'numOfStarship' => $countOfStarship,
+                'myShip'=>$myShip
+            ]);
     }
 }

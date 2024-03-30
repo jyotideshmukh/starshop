@@ -1,1 +1,20 @@
 <h1><strong>Starshop</strong>: monoply for all starshop'</h1>
+<div>
+    Browse no of starships: {{ numOfStarship }}
+</div>
+
+<div>
+    {% if numOfStarship > 500 %}
+        <p>The number of starships are great</p>
+    {% endif %}
+
+</div>
+<div>
+    <h3>My Ship</h3>
+    <table>
+        <tr><th><b>Name</b>:</th><td>{{ myShip.name|upper|lower|title }}</td></tr>
+        <tr><th><b>Status</b>:</th><td>{{ myShip.status|capitalize }}</td></tr>
+        <tr><th><b>Captain</b>:</th><td>{{ myShip.captain|upper }}</td></tr>
+        <tr><th><b>Number</b>:</th><td>{{ myShip.code }}</td></tr>
+    </table>
+</div>
